@@ -1,0 +1,11 @@
+create table student(
+	id number(10) primary key,
+	name varchar(20) not null,
+	address varchar(30),
+	gender varchar(10),
+	age number(3) check(age between 1 and 100) 
+);
+
+create sequence student_seq
+start with 1
+increment by 1;

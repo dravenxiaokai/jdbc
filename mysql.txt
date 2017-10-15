@@ -1,0 +1,29 @@
+create table student(
+	id int not null primary key auto_increment,
+	name varchar(20) not null,
+	nickname varchar(120) not null,
+	address varchar(30),
+	gender varchar(10),
+	age int,
+	unique key nicknameUiq(nickname)
+)ENGINE=innodb DEFAULT CHARSET=utf8;
+
+console:
+成功插入记录：1条
+
+mysql> select * from student;
++----+---------------+----------+-----------+--------+------+
+| id | name          | nickname | address   | gender | age  |
++----+---------------+----------+-----------+--------+------+
+|  1 | dravenxiaokai | draven   | changzhou | male   |   20 |
++----+---------------+----------+-----------+--------+------+
+1 row in set (0.00 sec)
+
+mysql> select * from student;
++----+---------------+----------+-----------+--------+------+
+| id | name          | nickname | address   | gender | age  |
++----+---------------+----------+-----------+--------+------+
+|  1 | dravenxiaokai | draven   | changzhou | male   |   20 |
+|  2 | zhangsan      | zsan     | changzhou | male   |   20 |
++----+---------------+----------+-----------+--------+------+
+2 rows in set (0.00 sec)
